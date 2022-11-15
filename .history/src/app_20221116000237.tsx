@@ -38,7 +38,7 @@ const AppContent: FunctionComponent = (): ReactElement => {
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/addmessage" component={Addmessage} />
                 <Route exact path="/viewmessage" component={Viewmessages} />
-                <Route exact path='/viewsinglemessage' component={Viewsinglemessage} />
+                <Route exact path="/viewsinglemessage/:id" component={Viewsinglemessage} />
 
 
                 <Route component={NotFoundPage} />

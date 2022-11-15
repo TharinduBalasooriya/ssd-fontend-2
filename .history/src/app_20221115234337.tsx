@@ -26,7 +26,7 @@ import { ErrorBoundary } from "./error-boundary";
 import { HomePage, NotFoundPage } from "./pages";
 import Addmessage from "./pages/Addmessage";
 import Viewmessages from "./pages/Viewmessages";
-import Viewsinglemessage from "./pages/Viewsinglemessage.js";
+import Viewsinglemessage from "./pages/Viewsinglemessage";
 
 const AppContent: FunctionComponent = (): ReactElement => {
     const { error } = useAuthContext();
@@ -37,9 +37,8 @@ const AppContent: FunctionComponent = (): ReactElement => {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/addmessage" component={Addmessage} />
-                <Route exact path="/viewmessage" component={Viewmessages} />
-                <Route exact path='/viewsinglemessage' component={Viewsinglemessage} />
-
+                <Route exact path="/viewmessage/:id" component={Viewmessages} />
+                <Route exact path="/viewsinglemessage" component={Viewsinglemessage} />
 
                 <Route component={NotFoundPage} />
             </Switch>

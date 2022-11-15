@@ -37,7 +37,7 @@ export default function Viewmessages() {
                                                 <h6 > Date : {Message.date}</h6>
                                             </div>
                                             <div style={{ paddingLeft: '107vh' }}>
-                                                <Button variant="outline-dark"   href='/viewsinglemessage' onClick={() => localStorage.setItem('id', Message._id)} >View Message</Button>
+                                                <Button variant="outline-dark"  href={`/viewsinglemessage/${Message.date}`} >View Message</Button>
                                             </div>
 
                                         </div>
