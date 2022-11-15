@@ -35,7 +35,9 @@
     "dependencies": {
         "@asgardeo/auth-react": "^1.1.18",
         "@babel/runtime-corejs3": "^7.11.2",
+        "bootstrap": "^5.2.2",
         "react": "^16.14.0",
+        "react-bootstrap": "^2.6.0",
         "react-dom": "16.14.0",
         "react-json-view": "^1.21.1",
         "react-router-dom": "5.2.0"

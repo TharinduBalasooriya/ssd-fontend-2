@@ -23,9 +23,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./app.css";
 import { default as authConfig } from "./config.json";
 import { ErrorBoundary } from "./error-boundary";
-import { HomePage, NotFoundPage } from "./pages";
-import Addmessage from "./pages/Addmessage";
-import Viewmessages from "./pages/Viewmessages";
+import { HomePage, NotFoundPage } from "./pages/Addmessage";
 
 const AppContent: FunctionComponent = (): ReactElement => {
     const { error } = useAuthContext();
@@ -35,8 +33,7 @@ const AppContent: FunctionComponent = (): ReactElement => {
             <Router>
             <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/addmessage" component={Addmessage} />
-                <Route exact path="/viewmessage" component={Viewmessages} />
+                <Route exact path="/addmessage" component={Addmessage}} />
 
                 <Route component={NotFoundPage} />
             </Switch>
