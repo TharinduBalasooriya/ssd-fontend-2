@@ -25,7 +25,7 @@ import { default as authConfig } from "./config.json";
 import { ErrorBoundary } from "./error-boundary";
 import { HomePage, NotFoundPage } from "./pages";
 import Addmessage from "./pages/Addmessage";
-import Viewmessages from "./pages/Viewmessages";
+import Viewmessages from "./pages/viewmessage";
 
 const AppContent: FunctionComponent = (): ReactElement => {
     const { error } = useAuthContext();
