@@ -24,7 +24,7 @@ export default function Viewsinglemessage() {
     }, [])
 
     function onDelete() {
-        axios.delete(`http://localhost:8070/message/${id}`).then((res) => {
+        axois.delete(`http://localhost:8070/message/${id}`).then((res) => {
             alert('Deleted Successfully');
             window.location='/viewmessage'
         }).catch((err) => {
@@ -50,8 +50,8 @@ export default function Viewsinglemessage() {
                                             <h5 > Description : {message.description}</h5><br/>
 
                                         </div>
-                                        <div style={{ paddingLeft: '57vh' }}>
-                                                <Button variant="outline-danger"    onClick={() => onDelete()}  >Delete Message</Button>
+                                        <div style={{ paddingLeft: '27vh' }}>
+                                                <Button variant="outline-danger"   href='/viewsinglemessage' onClick={() => onDelete()}  >View Message</Button>
                                             </div>
 
                                     </Card.Body>
