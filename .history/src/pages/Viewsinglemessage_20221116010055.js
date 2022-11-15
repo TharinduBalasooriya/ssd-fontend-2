@@ -24,7 +24,7 @@ export default function Viewsinglemessage() {
     }, [])
 
     function onDelete() {
-        axios.delete(`http://localhost:8070/message/${id}`).then((res) => {
+        axois.delete(`http://localhost:8070/message/${id}`).then((res) => {
             alert('Deleted Successfully');
             window.location='/viewmessage'
         }).catch((err) => {
