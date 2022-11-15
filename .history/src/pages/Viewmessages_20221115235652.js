@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 import axios from "axios";
+import { useParams } from 'react-router-dom';
 
 export default function Viewmessages() {
+    let params = useParams();
 
     const [message, setmessage] = useState([]);
 
@@ -37,7 +39,7 @@ export default function Viewmessages() {
                                                 <h6 > Date : {Message.date}</h6>
                                             </div>
                                             <div style={{ paddingLeft: '107vh' }}>
-                                                <Button variant="outline-dark"   href='/viewsinglemessage' onClick={() => localStorage.setItem('id', Message._id)} >View Message</Button>
+                                                <Button variant="outline-dark"  href={`/viewsinglemessage} >View Message</Button>
                                             </div>
 
                                         </div>

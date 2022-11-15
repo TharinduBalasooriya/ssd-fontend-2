@@ -1,0 +1,21 @@
+import React, { useState, useEffect } from "react";
+
+import { Card, Button, Row, Col, Form } from 'react-bootstrap';
+import axios from "axios";
+import { useParams } from 'react-router-dom';
+
+export default function Viewsinglemessage() {
+  
+    let params = useParams();
+    console.log(params.id);
+ 
+
+    return (
+        <div style={{ paddingTop: '6vh' }}>
+            <h1>All Messages</h1>
+                
+
+            
+        </div>
+    );
+}
