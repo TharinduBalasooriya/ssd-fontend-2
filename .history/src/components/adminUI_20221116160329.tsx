@@ -36,7 +36,7 @@ export default function AdminUI() {
               <br />
 
 
-              <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
+              <div style={{ paddingLeft: '12vh', paddingTop: '4vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
                 <Card.Img variant="top" src="https://media.tenor.com/Y0flR8fgl9sAAAAC/development-men.gif" style={{ width: '40vh' }} />
               </div>
