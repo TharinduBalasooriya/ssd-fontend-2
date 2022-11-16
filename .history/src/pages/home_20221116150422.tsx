@@ -29,7 +29,7 @@ import AdminUI from "../components/adminUI";
 import axios from "axios";
 import ManagerUI from "../components/managerUI";
 import Employee from "../components/employee";
-import { Card,Row,Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 /**
  * Decoded ID Token Response component Prop types interface.
@@ -198,25 +198,10 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                 } else {
                     return (
                         <div className="content">
-                        <div>
-                        <Row>
-                        <Col style={{backgroundColor:'#abcce0',paddingBottom:'100vh'}}>
-                        <div style={{paddingLeft:'6vh',paddingTop:'6vh'}} >
-                        <h2>Hello Welcome User !!</h2>
-                        <div style={{paddingLeft:'6vh',paddingTop:'30vh'}} >
+                           <div style={{paddingTop:'10%',paddingLeft:'35%'}}>
+                           <Card style={{width:'35rem'}}>
 
-                        <h3>If You have an account please Login to the system</h3>
-                        <h3>If You do not have an account please Register to the system</h3>
-                        </div>
-
-                        </div>
-                        </Col>
-                        <Col><div style={{paddingTop:'10%',paddingLeft:'35%'}}>
-                           <Card style={{width:'25rem'}}>
-                           <div style={{paddingLeft:'1vh',paddingTop:'2vh'}}>
-                           <Card.Img variant="top" src="https://gifimage.net/wp-content/uploads/2018/11/gif-en-avatar-facebook-4.gif" style={{width:'40vh'}}/>
-                            </div>
-                           <div style={{paddingLeft:'13vh'}}>
+                           <div style={{paddingTop:'5vh',paddingLeft:'2vh'}}>
 
                             <button
                                 className="btn primary"
@@ -227,7 +212,7 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                                 Login
                             </button>
                             </div>
-                            <div style={{paddingBottom:'2vh',paddingLeft:'13vh'}}>
+                            <div style={{paddingBottom:'2vh',paddingLeft:'2vh'}}>
 
                             <a href="/adduser">
                             <button
@@ -238,18 +223,7 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                             </div>
                             
                             </Card>
-                            </div></Col>
-
-                        </Row>
-
-                        </div>
-
-
-
-
-
-
-                           
+                            </div>
                         </div>
                     )
                 }

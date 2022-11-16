@@ -201,7 +201,7 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                         <div>
                         <Row>
                         <Col style={{backgroundColor:'#abcce0',paddingBottom:'100vh'}}>
-                        <div style={{paddingLeft:'6vh',paddingTop:'6vh'}} >
+                        <div style={{paddingLeft:'6vh',paddingTop:'4vh'}} >
                         <h2>Hello Welcome User !!</h2>
                         <div style={{paddingLeft:'6vh',paddingTop:'30vh'}} >
 
