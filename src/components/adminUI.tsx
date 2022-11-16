@@ -1,5 +1,8 @@
 import { useAuthContext } from '@asgardeo/auth-react';
 import React from 'react'
+import Addmessage from "../pages/Addmessage";
+import ButtonAppBar from "../components/ButtonAppBar"
+
 
 export default function AdminUI() {
   const {
@@ -20,6 +23,7 @@ let handleActivation = async ()=>{
 
   return (
     <div>
+      <ButtonAppBar></ButtonAppBar>
         <h1>Admin UI</h1>
         <button onClick={handleActivation}>
           Get Id token

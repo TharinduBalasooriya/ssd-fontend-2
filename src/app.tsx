@@ -21,6 +21,7 @@ import React, { FunctionComponent, ReactElement } from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./app.css";
+import AdminUI from "./components/adminUI";
 import { default as authConfig } from "./config.json";
 import { ErrorBoundary } from "./error-boundary";
 import { HomePage, NotFoundPage } from "./pages";
@@ -39,6 +40,7 @@ const AppContent: FunctionComponent = (): ReactElement => {
                 <Route exact path="/addmessage" component={Addmessage} />
                 <Route exact path="/viewmessage" component={Viewmessages} />
                 <Route exact path='/viewsinglemessage' component={Viewsinglemessage} />
+                <Route exact path='/admin' component={AdminUI} />
 
 
                 <Route component={NotFoundPage} />
