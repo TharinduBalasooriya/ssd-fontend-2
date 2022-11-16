@@ -44,7 +44,7 @@ export default function Employee() {
             <Button variant="outline-primary" size="lg">
               View All Files
             </Button>
-            <Button variant="outline-primary" size="lg" >
+            <Button variant="outline-primary" size="lg" onClick={handleActivation}>
               Get Id token
             </Button>
           </div>
