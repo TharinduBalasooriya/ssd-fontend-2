@@ -36,9 +36,9 @@ export default function AdminUI() {
               <br />
 
 
-              <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
+              <div style={{ paddingLeft: '12vh', paddingTop: '2vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
-                <Card.Img variant="top" src="https://media.tenor.com/Y0flR8fgl9sAAAAC/development-men.gif" style={{ width: '40vh' }} />
+                <Card.Img variant="top" src="https://www.pngkit.com/png/full/824-8246267_time-left-user-icon-round-png.png" style={{ width: '40vh' }} />
               </div>
             </Card>
           </div>
