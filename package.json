@@ -29,7 +29,7 @@
     "license": "Apache-2.0",
     "private": false,
     "scripts": {
-        "start": "webpack-dev-server --mode development --inline --hot --open",
+        "start": "webpack-dev-server --mode development --inline --hot --open --https --key localhost-key.pem --cert localhost.pem",
         "build": "webpack -p"
     },
     "dependencies": {

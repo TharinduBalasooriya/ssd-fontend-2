@@ -151,11 +151,12 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
         );
     }
 
-    if (state.isAuthenticated) {
+    if (state.isAuthenticated && !currentUser) {
         //Handle Get user details
         //let token = await getAccessToken()
         (async function () {
             let token = await getAccessToken()
+            console.log(token)
             let currUser = await axios.get('http://localhost:8070/user/me', {
                 headers: {
                     'token': `${token}`

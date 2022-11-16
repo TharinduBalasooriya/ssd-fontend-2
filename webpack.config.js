@@ -41,6 +41,8 @@ module.exports = {
         https: true,
         host: HOST,
         inline: true,
+        key: "localhost-key.pem",
+        cert: "localhost.pem",
         port: findPort(PORT, HOST, false, {
             extensions: {
                 BEFORE_getProcessTerminationMessage: () => {
