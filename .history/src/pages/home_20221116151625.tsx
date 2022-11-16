@@ -152,12 +152,11 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
         );
     }
 
-    if (state.isAuthenticated && !currentUser) {
+    if (state.isAuthenticated) {
         //Handle Get user details
         //let token = await getAccessToken()
         (async function () {
             let token = await getAccessToken()
-            console.log(token)
             let currUser = await axios.get('http://localhost:8070/user/me', {
                 headers: {
                     'token': `${token}`
@@ -201,14 +200,8 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                         <div className="content">
                         <div>
                         <Row>
-                        <Col style={{backgroundColor:'#abcce0',paddingBottom:'100vh'}}>
-                        <div style={{paddingLeft:'6vh',paddingTop:'6vh'}} >
-                        <h2>Hello Welcome User !!</h2>
-                        <div style={{paddingLeft:'6vh',paddingTop:'30vh'}} >
-
-                        <h3>If You have an account please Login to the system</h3>
-                        <h3>If You do not have an account please Register to the system</h3>
-                        </div>
+                        <Col style={{backgroundColor:'blue',paddingBottom:'10vh'}}>
+                        <div >
 
                         </div>
                         </Col>

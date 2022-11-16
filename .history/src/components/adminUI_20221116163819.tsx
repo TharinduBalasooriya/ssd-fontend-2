@@ -1,15 +1,22 @@
+import { useAuthContext } from '@asgardeo/auth-react';
 import React from 'react'
-import ButtonAppBar from './ButtonAppBar'
+import Addmessage from "../pages/Addmessage";
+import ButtonAppBar from "../components/ButtonAppBar"
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 
-export default function Employee() {
+
+export default function AdminUI() {
+  
+
+
+
   return (
     <div>
-        <ButtonAppBar></ButtonAppBar>
-        <div style={{paddingRight:'150vh',paddingTop:'3vh'}}>
-        <h1>Logged As Employee </h1>
-        </div>
-        <Row>
+      <ButtonAppBar></ButtonAppBar>
+      <div style={{ paddingRight: '150vh', paddingTop: '3vh' }}>
+        <h1>Loged In As Admin</h1>
+      </div>
+      <Row>
         <Col>
           <div style={{paddingLeft:'10vh',paddingTop:'8vh'}}>
 
@@ -19,7 +26,7 @@ export default function Employee() {
 
               <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
-                <Card.Img variant="top" src="https://icon-library.com/images/animated-gifs-icon/animated-gifs-icon-5.jpg" style={{ width: '40vh' }} />
+                <Card.Img variant="top" src="https://media.tenor.com/Y0flR8fgl9sAAAAC/development-men.gif" style={{ width: '40vh' }} />
               </div>
             </Card>
           </div>
@@ -44,13 +51,12 @@ export default function Employee() {
             <Button variant="outline-primary" size="lg">
               View All Files
             </Button>
-            <Button variant="outline-primary" size="lg" >
-              Get Id token
-            </Button>
+           
           </div>
         </Col>
 
       </Row>
+
     </div>
   )
 }

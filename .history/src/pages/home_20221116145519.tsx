@@ -29,7 +29,6 @@ import AdminUI from "../components/adminUI";
 import axios from "axios";
 import ManagerUI from "../components/managerUI";
 import Employee from "../components/employee";
-import { Card,Row,Col } from 'react-bootstrap';
 
 /**
  * Decoded ID Token Response component Prop types interface.
@@ -152,12 +151,11 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
         );
     }
 
-    if (state.isAuthenticated && !currentUser) {
+    if (state.isAuthenticated) {
         //Handle Get user details
         //let token = await getAccessToken()
         (async function () {
             let token = await getAccessToken()
-            console.log(token)
             let currUser = await axios.get('http://localhost:8070/user/me', {
                 headers: {
                     'token': `${token}`
@@ -199,26 +197,17 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                 } else {
                     return (
                         <div className="content">
-                        <div>
-                        <Row>
-                        <Col style={{backgroundColor:'#abcce0',paddingBottom:'100vh'}}>
-                        <div style={{paddingLeft:'6vh',paddingTop:'6vh'}} >
-                        <h2>Hello Welcome User !!</h2>
-                        <div style={{paddingLeft:'6vh',paddingTop:'30vh'}} >
-
-                        <h3>If You have an account please Login to the system</h3>
-                        <h3>If You do not have an account please Register to the system</h3>
-                        </div>
-
-                        </div>
-                        </Col>
-                        <Col><div style={{paddingTop:'10%',paddingLeft:'35%'}}>
-                           <Card style={{width:'25rem'}}>
-                           <div style={{paddingLeft:'1vh',paddingTop:'2vh'}}>
-                           <Card.Img variant="top" src="https://gifimage.net/wp-content/uploads/2018/11/gif-en-avatar-facebook-4.gif" style={{width:'40vh'}}/>
+                            <div className="home-image">
+                                <img src={REACT_LOGO} className="react-logo-image logo" />
                             </div>
-                           <div style={{paddingLeft:'13vh'}}>
-
+                            <h4 className={"spa-app-description"}>
+                                Sample demo to showcase authentication for a Single Page Application
+                                via the OpenID Connect Authorization Code flow,
+                                which is integrated using the&nbsp;
+                                <a href="https://github.com/asgardeo/asgardeo-auth-react-sdk" target="_blank">
+                                    Asgardeo Auth React SDK
+                                </a>.
+                            </h4>
                             <button
                                 className="btn primary"
                                 onClick={() => {
@@ -226,31 +215,15 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                                 }}
                             >
                                 Login
-                            </button>
-                            </div>
-                            <div style={{paddingBottom:'2vh',paddingLeft:'13vh'}}>
-
-                            <a href="/adduser">
+                            </button><br/><br/>
+                            
                             <button
                                 className="btn primary"
                             >
                                 Register
-                            </button></a>
-                            </div>
+                            </button>
                             
-                            </Card>
-                            </div></Col>
-
-                        </Row>
-
-                        </div>
-
-
-
-
-
-
-                           
+                            
                         </div>
                     )
                 }

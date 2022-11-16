@@ -1,13 +1,26 @@
 import { useAuthContext } from '@asgardeo/auth-react';
 import React from 'react'
+import Addmessage from "../pages/Addmessage";
 import ButtonAppBar from "../components/ButtonAppBar"
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 
 
 export default function AdminUI() {
-  
+  const {
+    state,
+    signIn,
+    signOut,
+    getBasicUserInfo,
+    getIDToken,
+    getDecodedIDToken,
+    getAccessToken,
+    on
+  } = useAuthContext();
 
-
+  let handleActivation = async () => {
+    let accessToken = await getAccessToken();
+    console.log(accessToken)
+  }
 
   return (
     <div>
@@ -17,19 +30,16 @@ export default function AdminUI() {
       </div>
       <Row>
         <Col>
-          <div style={{paddingLeft:'10vh',paddingTop:'8vh'}}>
 
-            <Card style={{ width: '35rem' }}>
-              <br />
+          <Card style={{ width: '35rem' }}>
+            <br />
+           
 
+            <div style={{ paddingLeft: '12vh', paddingTop: '2vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
-              <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
-
-                <Card.Img variant="top" src="https://media.tenor.com/Y0flR8fgl9sAAAAC/development-men.gif" style={{ width: '40vh' }} />
-              </div>
-            </Card>
-          </div>
-
+              <Card.Img variant="top" src="https://www.pngkit.com/png/full/824-8246267_time-left-user-icon-round-png.png" style={{ width: '40vh' }} />
+            </div>
+          </Card>
         </Col>
         <Col>
           <div className="d-grid gap-2" style={{ paddingTop: '15vh' }}>
@@ -50,7 +60,9 @@ export default function AdminUI() {
             <Button variant="outline-primary" size="lg">
               View All Files
             </Button>
-           
+            <Button variant="outline-primary" size="lg" onClick={handleActivation}>
+              Get Id token
+            </Button>
           </div>
         </Col>
 

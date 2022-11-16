@@ -2,14 +2,14 @@ import React from 'react'
 import ButtonAppBar from './ButtonAppBar'
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 
-export default function Employee() {
-  return (
-    <div>
-        <ButtonAppBar></ButtonAppBar>
-        <div style={{paddingRight:'150vh',paddingTop:'3vh'}}>
-        <h1>Logged As Employee </h1>
-        </div>
-        <Row>
+export default function ManagerUI() {
+    return (
+        <div>
+            <ButtonAppBar></ButtonAppBar>
+            <div style={{paddingRight:'150vh',paddingTop:'3vh'}}>
+            <h1>Logged As Manager </h1>
+            </div>
+            <Row>
         <Col>
           <div style={{paddingLeft:'10vh',paddingTop:'8vh'}}>
 
@@ -19,7 +19,7 @@ export default function Employee() {
 
               <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
-                <Card.Img variant="top" src="https://icon-library.com/images/animated-gifs-icon/animated-gifs-icon-5.jpg" style={{ width: '40vh' }} />
+                <Card.Img variant="top" src="https://cdn.dribbble.com/users/1107512/screenshots/3997677/_g.gif" style={{ width: '40vh' }} />
               </div>
             </Card>
           </div>
@@ -44,13 +44,13 @@ export default function Employee() {
             <Button variant="outline-primary" size="lg">
               View All Files
             </Button>
-            <Button variant="outline-primary" size="lg" >
+            <Button variant="outline-primary" size="lg" onClick={handleActivation}>
               Get Id token
             </Button>
           </div>
         </Col>
 
       </Row>
-    </div>
-  )
+        </div>
+    )
 }

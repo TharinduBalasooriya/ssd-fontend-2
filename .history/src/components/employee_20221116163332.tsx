@@ -19,7 +19,7 @@ export default function Employee() {
 
               <div style={{ paddingLeft: '12vh', paddingTop: '9vh', paddingBottom: '2vh', paddingRight: '2vh' }}>
 
-                <Card.Img variant="top" src="https://icon-library.com/images/animated-gifs-icon/animated-gifs-icon-5.jpg" style={{ width: '40vh' }} />
+                <Card.Img variant="top" src="https://media.tenor.com/Y0flR8fgl9sAAAAC/development-men.gif" style={{ width: '40vh' }} />
               </div>
             </Card>
           </div>
@@ -44,7 +44,7 @@ export default function Employee() {
             <Button variant="outline-primary" size="lg">
               View All Files
             </Button>
-            <Button variant="outline-primary" size="lg" >
+            <Button variant="outline-primary" size="lg" onClick={handleActivation}>
               Get Id token
             </Button>
           </div>
