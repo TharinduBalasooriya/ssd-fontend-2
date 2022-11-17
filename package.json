@@ -36,11 +36,15 @@
         "@asgardeo/auth-react": "^1.1.18",
         "@babel/runtime-corejs3": "^7.11.2",
         "bootstrap": "^5.2.2",
+        "firebase": "^9.14.0",
         "react": "^16.14.0",
         "react-bootstrap": "^2.6.0",
         "react-dom": "16.14.0",
+        "react-file-drop": "^3.1.6",
+        "react-firebase-file-uploader": "^2.4.4",
         "react-json-view": "^1.21.1",
-        "react-router-dom": "5.2.0"
+        "react-router-dom": "^5.2.0",
+        "uuid": "^9.0.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.12.1",

@@ -26,6 +26,8 @@ import { ErrorBoundary } from "./error-boundary";
 import { HomePage, NotFoundPage } from "./pages";
 import Addmessage from "./pages/Addmessage";
 import Viewmessages from "./pages/Viewmessages";
+import FileUpload from "./pages/FileUpload";
+import Viewfiles from "./pages/ViewFiles";
 
 const AppContent: FunctionComponent = (): ReactElement => {
     const { error } = useAuthContext();
@@ -36,7 +38,9 @@ const AppContent: FunctionComponent = (): ReactElement => {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/addmessage" component={Addmessage} />
+                <Route exact path="/fileupload" component={FileUpload} />
                 <Route exact path="/viewmessage" component={Viewmessages} />
+                <Route exact path="/viewfiles" component={Viewfiles} />
 
                 <Route component={NotFoundPage} />
             </Switch>
