@@ -38,15 +38,7 @@ export default function Employee() {
                 View All Messages      </a>
 
             </Button>
-            <Button variant="outline-primary" size="lg">
-              Add File
-            </Button>
-            <Button variant="outline-primary" size="lg">
-              View All Files
-            </Button>
-            <Button variant="outline-primary" size="lg" >
-              Get Id token
-            </Button>
+            
           </div>
         </Col>
 

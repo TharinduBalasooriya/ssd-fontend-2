@@ -158,13 +158,14 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
         (async function () {
             let token = await getAccessToken()
             console.log(token)
-            let currUser = await axios.get('http://localhost:8070/user/me', {
+            let currUser = await axios.get('https://localhost:8070/user/me', {
                 headers: {
                     'token': `${token}`
                 }
             })
+           
             setCurrentUser(currUser.data.result)
-
+ 
 
         })();
 
@@ -175,6 +176,9 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
 
 
             {(() => {
+                 console.log(currentUser)
+                 localStorage.setItem("currentUser",JSON.stringify(currentUser))
+
                 if (state.isAuthenticated && currentUser && currentUser.role === 'admin') {
                     return (
                         <div className="content">
@@ -189,14 +193,21 @@ export const HomePage: FunctionComponent<HomePagePropsInterface> = (): ReactElem
                         </div>
                     )
 
-                } else if (state.isAuthenticated ) {
+                } else if (state.isAuthenticated && currentUser) {
                     return (
                         <div>
                             <Employee></Employee>
                         </div>
                     )
 
-                } else {
+                } else if(state.isAuthenticated){
+                    return (
+                        <div>
+                           <h1>Loading ...........</h1>
+                        </div>
+                    )
+
+                }else {
                     return (
                         <div className="content">
                         <div>
