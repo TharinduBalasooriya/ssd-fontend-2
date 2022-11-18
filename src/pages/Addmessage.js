@@ -2,23 +2,38 @@ import React, { useState } from "react"
 
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 import axios from "axios";
+import { Hooks, useAuthContext } from "@asgardeo/auth-react";
 
 export default function Addmessage() {
+    const {
+
+        getAccessToken
+
+    } = useAuthContext();
+
     const [title, settitle] = useState(" ");
     const [description, setdescription] = useState(" ");
     const [date, setdate] = useState(" ");
 
-    function sendData(e) {
+    const  sendData = async (e)=> {
 
         e.preventDefault();
 
+        let user = JSON.parse(localStorage.getItem("currentUser"));
         const newUser = {
             title,
             description,
-            date
+            date,
+            userID : user.userID
         }
+        console.log("messgReq" , newUser)
+        let token = await getAccessToken();
 
-        axios.post("http://localhost:8070/message/", newUser).then(() => {
+        axios.post("https://localhost:8070/message/", newUser, {
+            headers: {
+                'token': `${token}`
+            }
+        }).then(() => {
             ("User added")
             settitle('');
             setdescription('');
@@ -26,7 +41,7 @@ export default function Addmessage() {
 
 
             alert("Message added");
-            window.location='/viewmessage'
+            window.location = '/viewmessage'
 
         }).catch((err) => {
             alert("error");
